@@ -1,12 +1,23 @@
 {
-  "name": "@apps/database",
+  "name": "@repo/database",
   "module": "index.ts",
-  "type": "module",
-  "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@prisma/cli-engine": "0.10.0",
+    "@types/bun": "latest",
+    "@types/node": "^26.6.6",
+    "prisma": "^8.0.0-rc.34"
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "contract:emit": "prisma contract emit"
+  },
+  "dependencies": {
+    "@prisma/orm-mongo": "^8.0.0-rc.24",
+    "dotenv": "^18.0.10",
+    "mongodb": "^7.9.0"
   }
 }
